@@ -1,15 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cipher Calculator</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #4a90e2;
+            font-size: 2.5em;
+        }
+        form {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            width: 300px;
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-size: 1em;
+            color: #555;
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="button"] {
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        input[type="button"]:hover {
+            background-color: #357abd;
+        }
+        h2 {
+            font-size: 1.8em;
+            margin-top: 30px;
+            color: #333;
+        }
+        p#results {
+            font-size: 1.2em;
+            color: #444;
+        }
+    </style>
 </head>
 <body>
     <h1>Cipher Calculator</h1>
     <form id="cipherForm">
-        <label for="plaintext">Plaintext:</label><br>
-        <input type="text" id="plaintext" name="plaintext"><br>
-        <label for="key">Key:</label><br>
-        <input type="text" id="key" name="key"><br>
+        <label for="plaintext">Plaintext:</label>
+        <input type="text" id="plaintext" name="plaintext" placeholder="Enter your plaintext">
+        <label for="key">Key:</label>
+        <input type="text" id="key" name="key" placeholder="Enter your key">
         <input type="button" value="Calculate" onclick="calculateCipher()">
     </form>
     <h2>Results</h2>
